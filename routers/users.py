@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, Path,Request,Form
 from starlette import status
-from ..models import Users
-from ..database import SessionLocal
+from models import Users
+from database import SessionLocal
 from .auth import get_current_user,authenticate_user,bcrypt_context
 from passlib.context import CryptContext
 from fastapi.templating import Jinja2Templates 
